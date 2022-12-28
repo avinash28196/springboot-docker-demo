@@ -1,4 +1,4 @@
-FROM 660003674944.dkr.ecr.us-east-1.amazonaws.com/openjdk:8-jdk-alpine
+FROM amazoncorretto:11-alpine-jdk as build
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 EXPOSE 8080
